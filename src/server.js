@@ -1,8 +1,8 @@
 const express = require('express');
 const morgan = require('morgan');
 const cors = require('cors');
-const mysql = require('mysql2/promise');
-const { PORT, dbConfig } = require('./config');
+// const mysql = require('mysql2/promise');
+const { PORT } = require('./config');
 const carsRoutes = require('./routes/carsRotues');
 
 const app = express();

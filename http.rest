@@ -1,0 +1,20 @@
+###
+GET http://localhost:3001/api/cars/
+
+###
+GET http://localhost:3001/api/cars/search/1
+
+###
+POST http://localhost:3001/api/cars/post
+Content-Type: application/json
+
+{
+    "id": "3",
+    "title": "VW ID4",
+    "image": "https://assets.newatlas.com/dims4/default/4241796/2147483647/strip/true/crop/6000x4000+0+0/resize/1440x960!/brightness/0x4/quality/90/?url=http%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2F82%2F7b%2F258f252048acb127b861d2e0f540%2F2021-volkswagen-id4-3.JPG",
+    "price": 56000,
+    "numberplates": "XXX888"
+}
+
+###
+DELETE http://localhost:3001/api/cars/3
