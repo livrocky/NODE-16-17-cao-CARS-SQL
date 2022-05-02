@@ -13,7 +13,7 @@ carsRotues.get('/cars', async (req, res) => {
     connection = await mysql.createConnection(dbConfig);
     console.log('connected');
     const sql = 'SELECT * FROM cars';
-    const [rows, fields] = await connection.execute(sql);
+    const [rows] = await connection.execute(sql);
     res.json(rows);
   } catch (error) {
     console.log('home route error ===', error);
@@ -49,6 +49,7 @@ carsRotues.post('/cars/post', async (req, res) => {
   let connection;
   try {
     const { id, title, image, price, numberplates } = req.body;
+    // eslint-disable-next-line no-shadow
     const connection = await mysql.createConnection(dbConfig);
     const sql = 'INSERT INTO cars (id, title, image, price, numberplates) VALUES (?, ?, ?, ?, ?)';
     const [rows] = await connection.execute(sql, [id, title, image, price, numberplates]);
