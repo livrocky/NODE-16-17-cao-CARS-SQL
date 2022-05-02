@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 /* eslint-disable import/extensions */
 import { BASE_URL } from './modules/config.js';
 import { renderCards } from './modules/html.js';
@@ -16,6 +17,19 @@ async function getServices() {
     console.log('servicesArr ===', servicesArr);
     console.log('piesiam korteles');
     renderCards(servicesArr, cardContainerEl);
+    // createCard(servicesArr[0]);
+  } catch (error) {
+    console.warn('error ===', error);
+    console.log('atvaizduojam klaida');
+  }
+}
+export async function deleteService(idToDelete) {
+  try {
+    const resp = await fetch(`${BASE_URL}/cars/${idToDelete}`, { method: 'DELETE' });
+    console.log('resp ===', resp);
+    // fetch nepermeta kodo i catch bloka jei status yra klaidos
+    if (resp.ok === false) throw new Error('error deleting');
+    getServices();
     // createCard(servicesArr[0]);
   } catch (error) {
     console.warn('error ===', error);

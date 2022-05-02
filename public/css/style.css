@@ -61,9 +61,11 @@ header {
   display: flex;
   flex-direction: column;
   text-align: center;
+  max-width: 30%;
+  box-shadow: 5px 10px 18px #dad5d5;
 }
 
-/* .card.members p {
+.card.members p {
   min-height: 3em;
 }
 
@@ -74,8 +76,7 @@ header {
   margin: 20px 0;
 }
 .card-service .btn-delete {
-  background-color: tomato;
-  align-self: flex-end;
+  align-self: flex-start;
   padding: 9px 12px;
   margin-right: 25px;
-  /* border: none; */
+}

@@ -1,3 +1,6 @@
+/* eslint-disable import/no-cycle */
+import { deleteService } from '../cars.js';
+
 /* eslint-disable import/prefer-default-export */
 function makeEl(tagName, text, dest, elClass = null, src = null) {
   const el = document.createElement(tagName);
@@ -14,15 +17,15 @@ function createCard(newCarObj) {
   articleEl.className = 'card-service';
   makeEl('h3', `${newCarObj.numberplates}`, articleEl);
   makeEl('p', `${newCarObj.title}`, articleEl);
+  makeEl('hr', '', articleEl, 'hr');
   makeEl('img', '', articleEl, '', `${newCarObj.image}`);
   makeEl('hr', '', articleEl, 'hr');
 
-  //   const btn = makeEl('button', '', articleEl, 'btn btn-delete');
-  //   makeEl('i', '', btn, 'fa fa-trash');
-  //   btn.onclick = () => {
-  //     console.log('delete ', newCarObj._id);
-  //     deleteService(newCarObj._id);
-  //   };
+  const btn = makeEl('button', 'DELETE', articleEl, 'btn btn-delete');
+  btn.onclick = () => {
+    console.log('delete ', newCarObj.id);
+    deleteService(newCarObj.id);
+  };
 
   // console.log('articleEl ===', articleEl);
   return articleEl;
