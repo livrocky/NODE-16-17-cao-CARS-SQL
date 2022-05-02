@@ -1,0 +1,42 @@
+@import 'reset.css';
+@import 'common.css';
+
+/* HEADER */
+
+/* Header =============================== */
+
+header {
+  background-color: rgb(233, 233, 233);
+}
+
+.main-nav {
+  display: flex;
+  gap: 20px;
+  justify-content: left;
+}
+
+.main-nav .nav-link {
+  display: block;
+  padding: 20px 25px;
+}
+
+.cars-main {
+  background-color: rgb(255, 255, 255);
+  padding: 5% 0;
+}
+.cars-main .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.cars-main .title-block {
+  grid-column: 1 / span 2;
+}
+
+.cards-container {
+  grid-column: 1 / span 3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 30px;
+}
