@@ -60,7 +60,7 @@ header {
   padding: 15px;
   display: flex;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
   max-width: 30%;
   box-shadow: 5px 10px 18px #dad5d5;
 }
