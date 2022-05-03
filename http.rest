@@ -9,11 +9,11 @@ POST http://localhost:3001/api/cars/post
 Content-Type: application/json
 
 {
-    "id": "5",
-    "title": "VW ID4",
-    "image": "https://assets.newatlas.com/dims4/default/4241796/2147483647/strip/true/crop/6000x4000+0+0/resize/1440x960!/brightness/0x4/quality/90/?url=http%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2F82%2F7b%2F258f252048acb127b861d2e0f540%2F2021-volkswagen-id4-3.JPG",
-    "price": 56000,
-    "numberplates": "XXX888"
+    "id": "6",
+    "title": "Tesla Roadster",
+    "image": "https://news7h.com/wp-content/uploads/2021/10/1teslaroadster.jpg",
+    "price": 130000,
+    "numberplates": "YYY555"
 }
 
 ###

@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 /* eslint-disable import/no-cycle */
 import { deleteService } from '../cars.js';
 
