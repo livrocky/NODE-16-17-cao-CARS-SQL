@@ -13,10 +13,10 @@ async function getServices() {
     // fetch nepermeta kodo i catch bloka jei status yra klaidos
     if (resp.ok === false) throw new Error('something is wrong');
 
-    const servicesArr = await resp.json();
-    console.log('servicesArr ===', servicesArr);
+    const carsArr = await resp.json();
+    console.log('servicesArr ===', carsArr);
     console.log('piesiam korteles');
-    renderCards(servicesArr, cardContainerEl);
+    renderCards(carsArr, cardContainerEl);
     // createCard(servicesArr[0]);
   } catch (error) {
     console.warn('error ===', error);

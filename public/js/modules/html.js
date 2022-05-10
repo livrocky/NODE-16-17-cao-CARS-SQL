@@ -12,7 +12,7 @@ function makeEl(tagName, text, dest, elClass = null, src = null) {
   return el;
 }
 
-function createCard(newCarObj) {
+export function createCard(newCarObj) {
   const articleEl = document.createElement('article');
 
   articleEl.className = 'card-service';
@@ -33,9 +33,7 @@ function createCard(newCarObj) {
 }
 
 export function renderCards(cardArr, dest) {
-  // isvalyti dest kad neliktu pries tai buvusiu korteliu
   dest.innerHTML = '';
-  // sukti cikla ir irasyti visas gautas korteles
   cardArr.forEach((cObj) => {
     const card = createCard(cObj);
     dest.append(card);
