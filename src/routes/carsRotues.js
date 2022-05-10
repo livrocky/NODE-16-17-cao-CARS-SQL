@@ -45,7 +45,7 @@ carsRotues.get('/cars/search/:id', async (req, res) => {
 
 // POST //
 
-carsRotues.post('/cars/post', async (req, res) => {
+carsRotues.post('/cars', async (req, res) => {
   let connection;
   try {
     const { id, title, image, price, numberplates } = req.body;

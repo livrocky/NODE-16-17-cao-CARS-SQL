@@ -1,3 +1,4 @@
+/* eslint-disable object-curly-newline */
 /* eslint-disable import/extensions */
 import { BASE_URL } from './modules/config.js';
 
@@ -26,14 +27,16 @@ formEl.addEventListener('submit', (e) => {
 });
 
 async function createCar(obj) {
-  const resp = await fetch(`${BASE_URL}/cars/post`, {
+  const resp = await fetch(`${BASE_URL}/cars`, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: {
+      'Content-Type': 'application/json',
+    },
     body: JSON.stringify(obj),
   });
   console.log('resp===', resp);
 
-  if (resp.status === 200) {
+  if (resp.ok) {
     // sukurta sekmingai
     window.location.href = 'index.html';
   } else {

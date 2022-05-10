@@ -1,3 +1,4 @@
+/* eslint-disable import/no-cycle */
 /* eslint-disable import/prefer-default-export */
 /* eslint-disable import/extensions */
 import { BASE_URL } from './modules/config.js';
@@ -10,7 +11,6 @@ async function getServices() {
   try {
     const resp = await fetch(`${BASE_URL}/cars`);
     console.log('resp ===', resp);
-    // fetch nepermeta kodo i catch bloka jei status yra klaidos
     if (resp.ok === false) throw new Error('something is wrong');
 
     const carsArr = await resp.json();

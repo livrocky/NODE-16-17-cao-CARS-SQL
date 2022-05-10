@@ -12,20 +12,20 @@ function makeEl(tagName, text, dest, elClass = null, src = null) {
   return el;
 }
 
-export function createCard(newCarObj) {
+export function createCard(newCardObj) {
   const articleEl = document.createElement('article');
 
   articleEl.className = 'card-service';
-  makeEl('h3', `${newCarObj.numberplates}`, articleEl);
-  makeEl('p', `${newCarObj.title}`, articleEl);
+  makeEl('h3', `${newCardObj.numberplates}`, articleEl);
+  makeEl('p', `${newCardObj.title}`, articleEl);
   makeEl('hr', '', articleEl, 'hr');
-  makeEl('img', '', articleEl, '', `${newCarObj.image}`);
+  makeEl('img', '', articleEl, '', `${newCardObj.image}`);
   makeEl('hr', '', articleEl, 'hr');
 
   const btn = makeEl('button', 'DELETE', articleEl, 'btn btn-delete');
   btn.onclick = () => {
-    console.log('delete ', newCarObj.id);
-    deleteService(newCarObj.id);
+    console.log('delete ', newCardObj.id);
+    deleteService(newCardObj.id);
   };
 
   // console.log('articleEl ===', articleEl);
