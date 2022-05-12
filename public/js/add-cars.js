@@ -2,7 +2,6 @@
 /* eslint-disable import/extensions */
 import { BASE_URL } from './modules/config.js';
 
-const idEl = document.getElementById('id');
 const titleEl = document.getElementById('title');
 const imgEl = document.getElementById('image');
 const priceEl = document.getElementById('price');
@@ -15,11 +14,10 @@ formEl.addEventListener('submit', (e) => {
   e.preventDefault();
   console.log('js is in control');
   const newCarObj = {
-    id: idEl.value,
-    title: titleEl.value,
-    img: imgEl.value,
+    title: titleEl.value.trim(''),
+    image: imgEl.value.trim(''),
     price: priceEl.value,
-    numberplates: numberplatesEl.value,
+    numberplates: numberplatesEl.value.trim(''),
   };
   console.log('newCarObj===', newCarObj);
   // eslint-disable-next-line no-use-before-define

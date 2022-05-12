@@ -48,11 +48,11 @@ carsRotues.get('/cars/search/:id', async (req, res) => {
 carsRotues.post('/cars', async (req, res) => {
   let connection;
   try {
-    const { id, title, image, price, numberplates } = req.body;
+    const { title, image, price, numberplates } = req.body;
     // eslint-disable-next-line no-shadow
     const connection = await mysql.createConnection(dbConfig);
-    const sql = 'INSERT INTO cars (id, title, image, price, numberplates) VALUES (?, ?, ?, ?, ?)';
-    const [rows] = await connection.execute(sql, [id, title, image, price, numberplates]);
+    const sql = 'INSERT INTO cars (title, image, price, numberplates) VALUES (?, ?, ?, ?)';
+    const [rows] = await connection.execute(sql, [title, image, price, numberplates]);
     console.log('connected');
     res.json(rows);
   } catch (error) {

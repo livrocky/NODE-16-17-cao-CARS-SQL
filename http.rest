@@ -9,7 +9,6 @@ POST http://localhost:3001/api/cars
 Content-Type: application/json
 
 {
-    "id": "17",
     "title": "Tesla",
     "image": "https://news7h.com/wp-content/uploads/2021/10/1teslaroadster.jpg",
     "price": "130000",
